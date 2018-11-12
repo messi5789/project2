@@ -1,0 +1,67 @@
+session_start();
+$len=count($_SESSION['show_hide']); 
+  
+$conn=mysqli_connect('localhost','root','12345678','chat'); 
+$user=$_SESSION['username'];
+ 
+ $query="select sentFrom,text,sentTo,count(sentFrom) as sl   from privatechat where sentTo='$user' GROUP BY sentFrom";
+  
+ $result=mysqli_query($conn,$query);
+  
+ $row=mysqli_fetch_assoc($result); 
+
+
+ if(mysqli_num_rows($result)>0){  
+ 
+	do{ 
+	if($row['sl']==$_SESSION['soluong'][$row['sentFrom']]+1||$row['sl']==1){
+	$_SESSION['soluong'][$row['sentFrom']]=$row['sl'];
+	if($len>0){ 
+	for($k=0;$k<$len;$k++){
+	 if($_SESSION['show_hide'][$k]==$row['sentFrom']){
+	 array_splice($_SESSION['show_hide'],$k);
+	 }
+	}
+ }
+}
+	if($len>0){
+	 for($i=0;$i<$len;$i++){
+		if($_SESSION['show_hide'][$i]!=$row['sentFrom']){ 
+		 echo"<div style=\"display:block\" class=\"private2\">";
+		echo "<p>".$row['sentFrom']."</p><br>";
+		echo"<input type=\"button\" value=\"private chat\"  id=\"".$row['sentFrom']."\" onclick=\"privateChat2(this)\">";
+		echo"<input type=\"button\" value=\"xóa\"    onclick=\"DeleteChat('".$row['sentFrom']."')\">";
+		echo"</div>"; 		 
+		break;
+
+		}else{
+			 
+			 echo"<div style=\"display:none\" class=\"private2\">";
+	echo "<p>".$row['sentFrom']."</p><br>";
+	echo"<input type=\"button\" value=\"private chat\"  id=\"".$row['sentFrom']."\" onclick=\"privateChat2(this)\">";
+	echo"<input type=\"button\" value=\"xóa\"    onclick=\"DeleteChat('".$row['sentFrom']."')\">";
+	echo"</div>"; 
+		}		
+		 
+	 }
+	  }else{
+		  echo"<div style=\"display:block\" class=\"private2\">";
+		echo "<p>".$row['sentFrom']."</p><br>";
+		echo"<input type=\"button\" value=\"private chat\"  id=\"".$row['sentFrom']."\" onclick=\"privateChat2(this)\">";
+		echo"<input type=\"button\" value=\"xóa\"    onclick=\"DeleteChat('".$row['sentFrom']."')\">";
+		echo"</div>"; 		
+		  
+		  
+	  }
+	 
+	  
+	}while($row=mysqli_fetch_assoc($result));
+
+	}else{
+		
+		echo"No private message";
+		
+		
+		
+	}
+

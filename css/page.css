@@ -1,0 +1,433 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+
+body{
+	 
+	 
+	font:15px Calibri,Arial,sans-serif;
+	border-top:5px solid #212121;
+}
+
+#footer{
+	background-color:#212121;
+	position:fixed;
+	width:100%;
+	height:70px;
+	bottom:0;
+	left:0;
+}
+
+a.tzine,a.tzine:visited{
+	background:url("../img/tzine.png") no-repeat right top;
+	border:none;
+	color:#FCFCFC;
+	font-size:12px;
+	height:70px;
+	left:50%;
+	line-height:31px;
+	margin:23px 0 0 110px;
+	position:absolute;
+	top:0;
+	width:290px;
+}
+
+ 
+
+h1{
+	font-size:20px;
+	font-weight:normal;
+	left:50%;
+	margin-left:-400px;
+	padding:25px 0;
+	position:absolute;
+	width:480px;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	border-bottom:1px dotted #97cae6;
+	color:#97cae6;
+}
+
+a:hover{
+	border-bottom:1px dashed transparent;
+}
+
+.clear{
+	clear:both;
+}
+
+ 
+.header{
+	width:500px;
+	margin:auto;
+	font-size:35px;
+	font-weight:bold;
+	color:Red;
+	
+	
+}
+ 
+.users{
+	background:url('../img/user.png') top left no-repeat;
+	padding-left:30px;
+	padding-top:5px;
+	margin-top:15px;
+	height:35px;
+	
+	
+}
+.you{
+	
+	background-color:pink;
+	
+}
+.you span{
+	color:blue;
+	
+}
+.users{
+	
+	background-color:white;
+	
+}
+
+.users span{
+	
+	color:grey;
+	
+}
+.clear{
+	
+	clear:both;
+	
+}
+.status{
+	
+	float:right;
+	margin-right:20px;
+	margin-top:10px;
+	
+	
+}
+.status p{
+	
+	color:red;
+	font-size:18px;
+	
+}
+.info{
+	
+	float:left;
+	margin-left:20px;
+	margin-top:10px;
+	
+}
+.info p{
+	float:left;
+	margin-right:40px;
+	color:blue;
+	font-size:18px;
+	font-weight:bold;
+	
+}
+ 
+#chatContainer{
+	width:620px;
+	margin: 50px auto;
+	position:relative;
+	border:5px solid grey; 
+}
+ 
+
+#chatTopBar{
+	height:50px;
+	background-color:grey;
+	border:1px solid #fff;
+	margin-bottom:25px;
+	position:relative;
+	
+	color:#777;
+	text-shadow:1px 1px 0 #FFFFFF;
+}
+
+#chatTopBar .name{
+	position:absolute;
+	top:10px;
+	left:40px;
+}
+
+#chatTopBar img{
+	left:9px;
+	position:absolute;
+	top:8px;
+}
+ 
+
+#chatLineHolder{
+	display:block;
+	height:450px;
+	width:470px;
+	margin-bottom:20px;
+	overflow: scroll;
+}
+#userList{
+	width:400px;
+	height:50px;
+	 
+	
+}
+.listUser{
+	font-size:16px;
+	float:left; 
+	margin-left:10px;
+	margin-right:15px;
+	
+}
+#chatPrivate{
+	height:450px;
+	width:470px;
+	margin-bottom:20px;
+	overflow: scroll;
+	display:none;
+	 
+}
+
+.chat{
+	background-color:#D8D8D8;
+	min-height:24px;
+	padding:6px;
+	border:1px solid #FFFFFF;
+	
+	padding:8px 6px 4px 37px;
+	position:relative;
+	margin:0 10px 10px 0;
+}
+
+.chat:last-child{
+	margin-bottom:0;
+}
+
+.chat span{
+	color:#777777;
+	text-shadow:1px 1px 0 #FFFFFF;
+	font-size:12px;
+}
+
+.chat .text{
+	color:#444444;
+	display:inline-block;
+	font-size:15px;
+	overflow:hidden;
+	vertical-align:top;
+	width:190px;
+}
+
+.chat .gravatar{
+	 
+	left:7px;
+	position:absolute;
+	top:7px;
+}
+
+.chat img{
+	display:block;
+	visibility:hidden;
+}
+
+.chat .time{
+	position:absolute;
+	right:10px;
+	top:12px;
+	font-size:11px;
+}
+
+.chat .author{
+	margin-right:6px;
+	font-size:11px;
+}
+ 
+#chatusers{ 
+	height:360px;
+	position:absolute;
+	right:0;
+	top:56px;
+	width:150px;
+	overflow: scroll;
+} 
+
+#chatBottomBar{
+	background-color:grey;
+	position:relative;
+	padding:17px;
+	border:3px solid black;
+}
+
+#chatBottomBar .tip{
+	position:absolute;
+	width:0;
+	height:0;
+	border:10px solid transparent;
+	border-bottom-color:#eeeeee;
+	top:-20px;
+	left:20px;
+}
+
+#chatContainer input{ 
+	height:26px;
+	font:13px/26px Calibri,Arial,sans-serif;
+	color:#777; 
+	padding:0 5px;
+	margin-right:5px;
+	 
+	 
+}
+
+
+ .list{
+	 
+	 border:1px solid black;
+	 
+ }
+
+input#chatText{
+	 
+	width:355px;
+}
+
+
+ 
+
+
+.jspVerticalBar{
+	background:none;
+	width:20px;
+}
+
+.jspTrack{
+	background-color:#202020;
+	border:1px solid #111111;
+	width:3px;
+	right:-10px;
+}
+
+.jspDrag {
+	background:url('../img/slider.png') no-repeat;
+	width:20px;
+	left:-9px;
+	height:20px  ;
+	margin-top:-5px;
+}
+
+.jspDrag:hover{
+	background-position:left bottom;
+}
+
+
+ 
+
+
+a.logoutButton{
+	background-color:#bbb;
+	border:1px solid #eee  ;
+	color:#FFFFFF  ;
+	font-size:12px;
+	padding:5px 9px;
+	position:absolute;
+	right:10px;
+	text-shadow:1px 1px 0 #888;
+	top:7px;
+	
+	-moz-box-shadow:0 0 7px #888 inset;
+	-webkit-box-shadow:0 0 7px #888 inset;
+	box-shadow:0 0 7px #888 inset;
+}
+
+ 
+ 
+#login{
+	width:65px;
+}
+ input[type*="button"]:hover{
+	background-position:left bottom;
+}
+
+ 
+#chatUsers .count{
+	clear:both;
+	font-size:12px;
+	padding:10px;
+	text-align:center;
+	text-shadow:1px 1px 0 #111111;
+}
+
+#chatUsers .count{
+	font-size:11px;
+}
+
+ 
+
+#chatErrorMessage{
+	width:100%;
+	top:0;
+	left:0;
+	position:fixed;
+	background-color:#ab0909;
+	border-bottom:1px solid #d32a2a;
+	font-size:23px;
+	padding:16px;
+	text-align:center;
+	color:#fff;
+	
+	 
+}
+.listUser{
+	
+	 margin-top:5px;
+	 
+	padding-right:0px;
+	
+	
+}
+.name{
+	 
+	 float:left;
+	 
+}
+.name p{
+	font-size:21px;
+	
+}
+.exit{
+	  margin-right:0px;
+	 
+	 float:right;
+	
+}
+#button{
+	margin-left:5px;
+	
+}
+#back  {
+	border:solid 2px black;
+	margin-bottom:10px;
+	width:100px;
+	
+}
+
+
+.letter{
+	
+	overflow:scroll;
+	width:230px;
+	height:170px;
+	border:2px solid  black;
+	
+	
+	
+	
+}
